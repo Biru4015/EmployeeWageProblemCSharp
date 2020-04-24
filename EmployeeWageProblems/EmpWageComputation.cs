@@ -15,11 +15,20 @@ namespace EmployeeWageProblems
         {
             Console.WriteLine("Welocme to Employee wage Problem");
             int isPresent = 1;
+            int salary = 0;
             Random random = new Random();
             if (random.Next() % 2 == isPresent)
+            {
                 Console.WriteLine("Employee is Present");
+                int empWagePerHr = 20;
+                int empHr = 8;
+                salary = empWagePerHr * empHr;
+            }
             else
-            Console.WriteLine("Employee is Absent");
+            {
+                Console.WriteLine("Employee is Absent");
+                salary = 0;
+            }
         }
     }
 }
