@@ -14,6 +14,12 @@ namespace EmployeeWageProblems
         static void Main(string[] args)
         {
             Console.WriteLine("Welocme to Employee wage Problem");
+            int isPresent = 1;
+            Random random = new Random();
+            if (random.Next() % 2 == isPresent)
+                Console.WriteLine("Employee is Present");
+            else
+            Console.WriteLine("Employee is Absent");
         }
     }
 }
