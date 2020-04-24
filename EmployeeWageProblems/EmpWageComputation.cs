@@ -14,21 +14,21 @@ namespace EmployeeWageProblems
         static void Main(string[] args)
         {
             Console.WriteLine("Welocme to Employee wage Problem");
-            int isPresent = 1;
+            int isFullTime = 1;
+            int isPartTime = 2;
             int salary = 0;
+            int empWagePerHr = 20;
+            int empHr = 4;
             Random random = new Random();
-            if (random.Next() % 2 == isPresent)
-            {
-                Console.WriteLine("Employee is Present");
-                int empWagePerHr = 20;
-                int empHr = 8;
-                salary = empWagePerHr * empHr;
-            }
+            int rand = (random.Next() % 2) + 1;
+            if (rand == isPartTime)
+                empHr = 4;
+            else if (rand == isFullTime)
+                empHr = 8;
             else
-            {
-                Console.WriteLine("Employee is Absent");
-                salary = 0;
-            }
+                empHr = 0;
+
+            salary = empWagePerHr * empHr;
         }
     }
 }
