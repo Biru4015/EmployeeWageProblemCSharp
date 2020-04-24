@@ -7,6 +7,9 @@ namespace EmployeeWageProblems
     /// </summary>
     class EmpWageComputation
     {
+        public const int isFullTime = 1;
+        public const int isPartTime = 2;
+        public const int empWagePerHr = 20;
         /// <summary>
         /// This is main method
         /// </summary>
@@ -14,20 +17,23 @@ namespace EmployeeWageProblems
         static void Main(string[] args)
         {
             Console.WriteLine("Welocme to Employee wage Problem");
-            int isFullTime = 1;
-            int isPartTime = 2;
             int salary = 0;
-            int empWagePerHr = 20;
-            int empHr = 4;
+            int empHr=0;
             Random random = new Random();
-            int rand = (random.Next() % 2) + 1;
-            if (rand == isPartTime)
-                empHr = 4;
-            else if (rand == isFullTime)
-                empHr = 8;
-            else
-                empHr = 0;
-
+            int rand = (random.Next() % 3) + 1;
+            switch(rand)
+            {
+                case isFullTime:
+                    empHr=8;
+                    break;
+                case isPartTime:
+                    empHr = 4;
+                    break;
+                default:
+                    empHr = 0;
+                    break;
+                    
+            }
             salary = empWagePerHr * empHr;
         }
     }
