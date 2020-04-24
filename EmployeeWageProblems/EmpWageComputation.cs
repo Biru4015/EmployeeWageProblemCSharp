@@ -12,6 +12,7 @@ namespace EmployeeWageProblems
         public const int IS_FULL_TIME = 2;
         public const int EMP_WAGE_PER_HR = 20;
         public const int WORKING_DAYS = 20;
+        public const int MAX_HRS_IN_MONTH = 100;
         /// <summary>
         /// This is main method
         /// </summary>
@@ -21,9 +22,11 @@ namespace EmployeeWageProblems
             Console.WriteLine("Welocme to Employee wage Problem");
             int monthlySalary = 0;
             int empHr=0;
-            int salary = 0;
-            for(int day=1;day<=WORKING_DAYS;day++)
+            int totalEmpHrs = 0;
+            int totalWorkingDay = 0;
+            while(totalEmpHrs < MAX_HRS_IN_MONTH && totalEmpHrs < WORKING_DAYS)
             {
+                totalWorkingDay++;
                 Random random = new Random();
                 int rand = (random.Next() % 3) + 1;
                 switch(rand)
@@ -38,9 +41,9 @@ namespace EmployeeWageProblems
                         empHr = 0;
                         break;
                 }
-                salary = EMP_WAGE_PER_HR * empHr;
-                monthlySalary = monthlySalary + salary;
+                totalEmpHrs = totalEmpHrs + empHr;
             }
+            monthlySalary = EMP_WAGE_PER_HR * totalEmpHrs;
             Console.WriteLine("Monthly salary of employee is "+monthlySalary);
         }
     }
