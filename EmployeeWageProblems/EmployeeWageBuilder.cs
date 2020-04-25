@@ -10,9 +10,6 @@ namespace EmployeeWageProblems
         //Constants
         public const int IS_PART_TIME = 1;
         public const int IS_FULL_TIME = 2;
-        public const int EMP_WAGE_PER_HR = 20;
-        public const int WORKING_DAYS = 20;
-        public const int MAX_HRS_IN_MONTH = 100;
 
         //varialble
         public static int totalEmpHrs = 0;
@@ -44,10 +41,10 @@ namespace EmployeeWageProblems
         /// <summary>
         /// This methos is created for calculate employee wage
         /// </summary>
-        public static void ComputeEmployeeWage()
+        public static void ComputeEmployeeWage(String company,int empRate,int numOFDays,int maxHrs )
         {
             int monthlySalary = 0;
-            while (totalWorkingDays < MAX_HRS_IN_MONTH && totalWorkingDays < WORKING_DAYS)
+            while (totalEmpHrs<maxHrs  && totalWorkingDays < numOFDays)
             {
                 totalWorkingDays++;
                 Random random = new Random();
@@ -55,8 +52,8 @@ namespace EmployeeWageProblems
                 empHr = GetWorkingHour(rand);
                 totalEmpHrs = totalEmpHrs + empHr;
             }
-            monthlySalary = EMP_WAGE_PER_HR * totalEmpHrs;
-            Console.WriteLine("Total salary of employee in a month is " + monthlySalary);
+            monthlySalary = empRate * totalEmpHrs;
+            Console.WriteLine("Day "+totalWorkingDays+" Employee of a company is "+company+" is "+monthlySalary);
         }
 
         /// <summary>
@@ -66,7 +63,10 @@ namespace EmployeeWageProblems
         static void Main(string[] args)
         {
             Console.WriteLine("Welocme to Employee wage Problem");
-            ComputeEmployeeWage();
+            ComputeEmployeeWage("BridgeLabz",25,22,90);
+            ComputeEmployeeWage("Flipkart", 40, 18, 100);
+            ComputeEmployeeWage("Amazon", 45, 24, 110);
+            ComputeEmployeeWage("ThoughtWorks", 30, 20, 110);
         }
     }
 }
