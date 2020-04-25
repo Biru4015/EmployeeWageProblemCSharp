@@ -42,14 +42,12 @@ namespace EmployeeWageProblems
         }
         
         /// <summary>
-        /// This is main method
+        /// This methos is created for calculate employee wage
         /// </summary>
-        /// <param name="args"></param>
-        static void Main(string[] args)
+        public static void ComputeEmployeeWage()
         {
-            Console.WriteLine("Welocme to Employee wage Problem");
             int monthlySalary = 0;
-            while(totalWorkingDays < MAX_HRS_IN_MONTH && totalWorkingDays < WORKING_DAYS)
+            while (totalWorkingDays < MAX_HRS_IN_MONTH && totalWorkingDays < WORKING_DAYS)
             {
                 totalWorkingDays++;
                 Random random = new Random();
@@ -58,7 +56,17 @@ namespace EmployeeWageProblems
                 totalEmpHrs = totalEmpHrs + empHr;
             }
             monthlySalary = EMP_WAGE_PER_HR * totalEmpHrs;
-            Console.WriteLine("Total salary of employee in a month is "+monthlySalary);
+            Console.WriteLine("Total salary of employee in a month is " + monthlySalary);
+        }
+
+        /// <summary>
+        /// This is main method
+        /// </summary>
+        /// <param name="args"></param>
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Welocme to Employee wage Problem");
+            ComputeEmployeeWage();
         }
     }
 }
