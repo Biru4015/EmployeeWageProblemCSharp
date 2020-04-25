@@ -5,7 +5,7 @@ namespace EmployeeWageProblems
     /// <summary>
     /// This conatains the code for welcome message for Employee wage problem
     /// </summary>
-    class EmpWageComputation
+    class EmployeeWageBuilder
     {
         //Constants
         public const int IS_PART_TIME = 1;
