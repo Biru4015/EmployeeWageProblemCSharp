@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace EmployeeWageProblems
 {
@@ -17,8 +18,8 @@ namespace EmployeeWageProblems
             Console.WriteLine("Welocme to Employee wage Problem");
             Console.WriteLine();
 
-            CompanyEmpWage[] companyobj = new CompanyEmpWage[10];
-            for(int index=1;index<=companyobj.Length;index++)
+            ArrayList companyobj = new ArrayList();
+            for (int index=1;index<=2;index++)
             {
                 Console.WriteLine("Please enter the "+index+"st company details.");
                 Console.Write("Enter the company name: ");
@@ -29,14 +30,14 @@ namespace EmployeeWageProblems
                 int numOfDays = Convert.ToInt32(Console.ReadLine());
                 Console.Write("Please enter the max working hrs in a month: ");
                 int maxHrs = Convert.ToInt32(Console.ReadLine());
-
-                 companyobj[index]= new CompanyEmpWage(companyname, empRate, numOfDays, maxHrs);
+                
+                companyobj.Add( new CompanyEmpWage(companyname, empRate, numOfDays, maxHrs));
 
             }
 
-            foreach(var item in companyobj)
+            foreach(CompanyEmpWage item in companyobj)
             {
-                Console.WriteLine(item.ComputeEmployeeWage());
+                item.ComputeEmployeeWage();
             }
         }
     }

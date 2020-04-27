@@ -6,6 +6,7 @@ namespace EmployeeWageProblems
 {
     class CompanyEmpWage
     {
+        
 
         //Constants
         public const int IS_PART_TIME = 1;
@@ -15,6 +16,7 @@ namespace EmployeeWageProblems
         public static int totalEmpHrs = 0;
         public static int totalWorkingDays = 0;
         public static int empHr = 0;
+
 
         //variable
         private String companyName;
@@ -62,7 +64,7 @@ namespace EmployeeWageProblems
         /// <summary>
         /// This methos is created for calculate employee wage
         /// </summary>
-        public String ComputeEmployeeWage()
+        public void ComputeEmployeeWage()
         {
             int monthlySalary = 0;
             while (totalEmpHrs < maxHrs && totalWorkingDays < numOfDays)
@@ -74,7 +76,7 @@ namespace EmployeeWageProblems
                 totalEmpHrs = totalEmpHrs + empHr;
             }
             monthlySalary = empRate * totalEmpHrs;
-            return "Day " + totalWorkingDays + " Employee of a company is " + companyName + " is " + monthlySalary;
+            Console.WriteLine("Day " + totalWorkingDays + " Employee of a company is " + companyName + " is " + monthlySalary);
         }
     }
 }

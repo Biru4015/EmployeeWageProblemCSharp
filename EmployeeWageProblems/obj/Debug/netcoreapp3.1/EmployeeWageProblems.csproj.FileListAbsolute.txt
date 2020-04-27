@@ -5,9 +5,9 @@ C:\Users\Birendra Kumar\source\repos\EmployeeWageProblems\bin\Debug\netcoreapp3.
 C:\Users\Birendra Kumar\source\repos\EmployeeWageProblems\bin\Debug\netcoreapp3.1\EmployeeWageProblems.dll
 C:\Users\Birendra Kumar\source\repos\EmployeeWageProblems\bin\Debug\netcoreapp3.1\EmployeeWageProblems.pdb
 C:\Users\Birendra Kumar\source\repos\EmployeeWageProblems\obj\Debug\netcoreapp3.1\EmployeeWageProblems.csprojAssemblyReference.cache
-C:\Users\Birendra Kumar\source\repos\EmployeeWageProblems\obj\Debug\netcoreapp3.1\EmployeeWageProblems.csproj.CoreCompileInputs.cache
 C:\Users\Birendra Kumar\source\repos\EmployeeWageProblems\obj\Debug\netcoreapp3.1\EmployeeWageProblems.AssemblyInfoInputs.cache
 C:\Users\Birendra Kumar\source\repos\EmployeeWageProblems\obj\Debug\netcoreapp3.1\EmployeeWageProblems.AssemblyInfo.cs
 C:\Users\Birendra Kumar\source\repos\EmployeeWageProblems\obj\Debug\netcoreapp3.1\EmployeeWageProblems.dll
 C:\Users\Birendra Kumar\source\repos\EmployeeWageProblems\obj\Debug\netcoreapp3.1\EmployeeWageProblems.pdb
 C:\Users\Birendra Kumar\source\repos\EmployeeWageProblems\obj\Debug\netcoreapp3.1\EmployeeWageProblems.genruntimeconfig.cache
+C:\Users\Birendra Kumar\source\repos\EmployeeWageProblems\obj\Debug\netcoreapp3.1\EmployeeWageProblems.csproj.CoreCompileInputs.cache
