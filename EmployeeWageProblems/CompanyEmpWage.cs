@@ -6,17 +6,9 @@ namespace EmployeeWageProblems
 {
     class CompanyEmpWage
     {
-        
-
         //Constants
         public const int IS_PART_TIME = 1;
         public const int IS_FULL_TIME = 2;
-
-        //varialble
-        public static int totalEmpHrs = 0;
-        public static int totalWorkingDays = 0;
-        public static int empHr = 0;
-
 
         //variable
         private String companyName;
@@ -66,14 +58,20 @@ namespace EmployeeWageProblems
         /// </summary>
         public void ComputeEmployeeWage()
         {
-            int monthlySalary = 0;
+             //varialble
+             int totalEmpHrs = 0;
+             int totalWorkingDays = 0;
+             int empHr = 0;
+             int monthlySalary = 0;
+
             while (totalEmpHrs < maxHrs && totalWorkingDays < numOfDays)
             {
-                totalWorkingDays++;
                 Random random = new Random();
                 int checkAttendance = (random.Next() % 3) + 1;
                 empHr = GetWorkingHour(checkAttendance);
                 totalEmpHrs = totalEmpHrs + empHr;
+                totalWorkingDays++;
+                Console.WriteLine("Day"+totalWorkingDays+" wage is "+empHr*empRate);
             }
             monthlySalary = empRate * totalEmpHrs;
             Console.WriteLine("Day " + totalWorkingDays + " Employee of a company is " + companyName + " is " + monthlySalary);

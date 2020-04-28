@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using EmployeeWageProblems;
 
 namespace EmployeeWageProblems
 {
@@ -19,23 +20,13 @@ namespace EmployeeWageProblems
             Console.WriteLine();
 
             ArrayList companyobj = new ArrayList();
-            for (int index=1;index<=2;index++)
-            {
-                Console.WriteLine("Please enter the "+index+"st company details.");
-                Console.Write("Enter the company name: ");
-                String companyname = Console.ReadLine();
-                Console.Write("Please enter the rate per hour: ");
-                int empRate = Convert.ToInt32(Console.ReadLine());
-                Console.Write("Enter the maximum working days in a month: ");
-                int numOfDays = Convert.ToInt32(Console.ReadLine());
-                Console.Write("Please enter the max working hrs in a month: ");
-                int maxHrs = Convert.ToInt32(Console.ReadLine());
-                
-                companyobj.Add( new CompanyEmpWage(companyname, empRate, numOfDays, maxHrs));
+            companyobj.Add( new CompanyEmpWage("Relaince", 20, 24, 120));
+            companyobj.Add(new CompanyEmpWage("Jio", 25, 20, 100));
+            companyobj.Add(new CompanyEmpWage("Flipkart", 30, 20, 110));
+            companyobj.Add(new CompanyEmpWage("Jio", 40, 18, 90));
+            companyobj.Add(new CompanyEmpWage("Google", 50, 20, 130));
 
-            }
-
-            foreach(CompanyEmpWage item in companyobj)
+            foreach (CompanyEmpWage item in companyobj)
             {
                 item.ComputeEmployeeWage();
             }
