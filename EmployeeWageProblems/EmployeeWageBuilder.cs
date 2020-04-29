@@ -10,22 +10,22 @@ namespace EmployeeWageProblems
     class EmployeeWageBuilder
     {
         /// <summary>
+        /// Creating arraylist of multiple compnies.
+        /// </summary>
+        public static ArrayList companyarray = new ArrayList();
+
+        /// <summary>
         /// This method is created for finding monthly wage of a company
         /// </summary>
         /// <param name="companyName"></param>
         public static void GetTotalWageByCompany(String companyName)
         {
-            ArrayList companyobj = new ArrayList();
-            companyobj.Add(new CompanyEmpWage("Relaince", 20, 24, 120));
-            companyobj.Add(new CompanyEmpWage("Jio", 25, 20, 100));
-            companyobj.Add(new CompanyEmpWage("Flipkart", 30, 20, 110));
-            companyobj.Add(new CompanyEmpWage("Jio", 40, 18, 90));
-            companyobj.Add(new CompanyEmpWage("Google", 50, 20, 80));
-            foreach(CompanyEmpWage item in companyobj)
+
+            foreach(CompanyEmpWage companyWage in companyarray)
             {
-                if( item.ComputeEmployeeWage().Contains(companyName))
+                if(companyWage.ComputeEmployeeWage().Contains(companyName))
                 {
-                    Console.WriteLine(item.ComputeEmployeeWage());
+                    Console.WriteLine(companyWage.ComputeEmployeeWage());
                     break;   
                 }
             }
@@ -39,6 +39,12 @@ namespace EmployeeWageProblems
         {
             Console.WriteLine("Welocme to Employee wage Problem");
             Console.WriteLine();
+
+            companyarray.Add(new CompanyEmpWage("Relaince", 20, 24, 120));
+            companyarray.Add(new CompanyEmpWage("Jio", 25, 20, 100));
+            companyarray.Add(new CompanyEmpWage("Flipkart", 30, 20, 110));
+            companyarray.Add(new CompanyEmpWage("Jio", 40, 18, 90));
+            companyarray.Add(new CompanyEmpWage("Google", 50, 20, 80));
 
             Console.Write("Enter the company name: ");
             string comapnyName = Console.ReadLine();
