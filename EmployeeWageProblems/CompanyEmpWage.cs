@@ -54,9 +54,10 @@ namespace EmployeeWageProblems
         }
 
         /// <summary>
-        /// This methos is created for calculate employee wage
+        /// This method is created for compute monthly wage of Employee
         /// </summary>
-        public void ComputeEmployeeWage()
+        /// <returns>monthlywage</returns>
+        public string ComputeEmployeeWage()
         {
              //varialble
              int totalEmpHrs = 0;
@@ -71,10 +72,9 @@ namespace EmployeeWageProblems
                 empHr = GetWorkingHour(checkAttendance);
                 totalEmpHrs = totalEmpHrs + empHr;
                 totalWorkingDays++;
-                Console.WriteLine("Day"+totalWorkingDays+" wage is "+empHr*empRate);
             }
             monthlySalary = empRate * totalEmpHrs;
-            Console.WriteLine("Day " + totalWorkingDays + " Employee of a company is " + companyName + " is " + monthlySalary);
+             return "Day " + totalWorkingDays + " Employee wage of " + companyName + " is " + monthlySalary;
         }
     }
 }
